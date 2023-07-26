@@ -157,9 +157,10 @@ You can also run the application using Docker. Make sure you have Docker install
 
     ![Lighthouse1](https://github.com/DiziASP/seleksi-3-labpro-monolith/blob/master/.github/image/lighthouse-1.png?raw=true)
     ![Lighthouse2](https://github.com/DiziASP/seleksi-3-labpro-monolith/blob/master/.github/image/lighthouse-2.png?raw=true)
-
-    Based on this score, I've managed to gain a average score more than 95. The reason of the low score for the performance is because the CPU used in railway free tier is noticeably slow and also
-    python is considerably slower than most of programming language
+    ![Lighthouse3](https://github.com/DiziASP/seleksi-3-labpro-monolith/blob/master/.github/image/lighthouse-3.png?raw=true)
+    ![Lighthouse4](https://github.com/DiziASP/seleksi-3-labpro-monolith/blob/master/.github/image/lighthouse-4.png?raw=true)
+  
+    Based on this score, I've managed to gain a average score of more than 95. The reason of the low score for the performance is because the CPU used in railway free tier is noticeably slow and also python is considerably slower than most of programming language
 
 * **B06 - Responsive Layout**
 
