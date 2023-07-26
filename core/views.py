@@ -8,8 +8,6 @@ from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.renderers import TemplateHTMLRenderer
-from rest_framework.exceptions import PermissionDenied
-from rest_framework.permissions import AllowAny
 
 import requests as req
 import os
@@ -20,7 +18,7 @@ from .permissions import IsUserAuthenticated
 
 # Create your views here.
 class ProductAPIView(ListAPIView):
-    permission_classes = (AllowAny,)
+    permission_classes = (IsUserAuthenticated,)
     template_name = 'core/catalogue.html'
     renderer_classes = [TemplateHTMLRenderer]
 
@@ -54,7 +52,7 @@ class ProductAPIView(ListAPIView):
         return Response(context, status=status.HTTP_200_OK)
     
 class ProductDetailAPIView(ListAPIView):
-    permission_classes = (AllowAny,)
+    permission_classes = (IsUserAuthenticated,)
     template_name = 'core/product-details.html'
     renderer_classes = [TemplateHTMLRenderer]
     serializer_class = PurchaseHistorySerializer
@@ -110,7 +108,7 @@ class ProductDetailAPIView(ListAPIView):
         return redirect(reverse('api-product-details', args=[pk]))
     
 class PurchaseHistoryAPIView(ListAPIView):
-    permission_classes = (AllowAny,)
+    permission_classes = (IsUserAuthenticated,)
     template_name = 'core/purchase-history.html'
     renderer_classes = [TemplateHTMLRenderer]
     
