@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/ArmynC/ArminC-AutoExec/archive/master.zip">
-    <img src="https://raw.githubusercontent.com/ArmynC/ArminC-AutoExec/master/arminc_autoexec.png" alt="ArminC AutoExec">
+  <a href="https://github.com/DiziASP/seleksi-3-labpro-monolith">
+    <img src="https://github.com/DiziASP/seleksi-3-labpro-monolith/blob/master/.github/image/monolith-logo.png?raw=true" alt="Monolith FS">
   </a>
 </h1>
 
@@ -18,7 +18,9 @@
   <a href="#installation">Installation</a> •
   <a href="#docker">Docker</a> •
   <a href="#tech-stack">Tech Stack</a> •
-  <a href="#my-design-patterns">My Design Patterns</a>
+  <a href="#my-design-patterns">My Design Patterns</a> •
+  <a href="#bonus">Bonus</a> •
+  <a href="#license">License</a>
 </p>
 
 ---
@@ -31,7 +33,7 @@
   
 **BelanjaBelinji** is a **monolithic fullstack web application** built on _Django and TailwindCSS_ that aims to provide a **seamless** shopping experience for customers. It is a **monolithic** application, meaning that the frontend and backend are **coupled** together. This project is made for the **Seleksi 3 LabPro** assignment.
 
-![Landing Page](https://raw.githubusercontent.com/ArmynC/ArminC-AutoExec/master/arminc_autoexec_code.png)
+![Landing Page](https://github.com/DiziASP/seleksi-3-labpro-monolith/blob/master/.github/image/Landing.png?raw=true)
 <p align="right">
 <sub>(Preview)</sub>
 </p>
@@ -106,7 +108,9 @@ You can also run the application using Docker. Make sure you have Docker install
       docker-compose up
       ```
 
-4. Your docker is up and running. Open the website url `http://127.0.0.1:8000/` on your browser. insert picture here
+4. Your docker is up and running. Open the website url `http://127.0.0.1:8000/` on your browser.
+
+   ![Landing Page](https://github.com/DiziASP/seleksi-3-labpro-monolith/blob/master/.github/image/docker-container.png?raw=true)
 
 ## Tech Stack
 
@@ -201,7 +205,7 @@ You can also run the application using Docker. Make sure you have Docker install
 
     In the monolith application, I added a **Search Bar** feature on the **Product List Page**. This feature is useful for customers to search for products that they want to buy.
 
-    (insert picture here)
+    ![Search](https://github.com/DiziASP/seleksi-3-labpro-monolith/blob/master/.github/image/search-bar.png?raw=true)
 
 * **B12 - FE Admin Bug**
 
