@@ -137,7 +137,7 @@ You can also run the application using Docker. Make sure you have Docker install
 
 * **B01 - OWASP**
 
-    (Not Implemented yet)
+    This bonus implementation is explained further on the [Single Service Repository](https://github.com/DiziASP/seleksi-3-labpro-ss-be)
 
 * **B02 - Deployment**
 
@@ -155,13 +155,17 @@ You can also run the application using Docker. Make sure you have Docker install
 
     Using Google Chrome Lighthouse, I got the following results for the website's Front End:
 
-    (insert picture here)
+    ![Lighthouse1](https://github.com/DiziASP/seleksi-3-labpro-monolith/blob/master/.github/image/lighthouse-1.png?raw=true)
+    ![Lighthouse2](https://github.com/DiziASP/seleksi-3-labpro-monolith/blob/master/.github/image/lighthouse-2.png?raw=true)
+
+    Based on this score, I've managed to gain a average score more than 95. The reason of the low score for the performance is because the CPU used in railway free tier is noticeably slow and also
+    python is considerably slower than most of programming language
 
 * **B06 - Responsive Layout**
 
     The website is responsive-ish since i'm using overflow on the table hence in the mobile view the table is scrollable to the left and right.
 
-    (insert picture here)
+    ![Mobile](https://github.com/DiziASP/seleksi-3-labpro-monolith/blob/master/.github/image/mobile.png?raw=true)
 
 * **B07 - API Documentation**
 
