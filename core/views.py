@@ -8,6 +8,7 @@ from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.renderers import TemplateHTMLRenderer
+from rest_framework.exceptions import PermissionDenied
 
 import requests as req
 import os
@@ -22,10 +23,12 @@ class ProductAPIView(ListAPIView):
     template_name = 'core/catalogue.html'
     renderer_classes = [TemplateHTMLRenderer]
 
-    def get(self, request):
+    def dispatch(self, request, *args, **kwargs):
         if request.COOKIES.get('AUTH_COOKIE') is None and request.COOKIES.get('USERNAME') is None:
             return redirect(reverse('auth_login'))
-        
+        return super().dispatch(request, *args, **kwargs)
+    
+    def get(self, request):
         search_query = request.GET.get('q')
         if search_query:
             data = req.get(os.environ.get('SS_API_URL') + 'barang?q=' + search_query).json()
@@ -56,9 +59,12 @@ class ProductDetailAPIView(ListAPIView):
     renderer_classes = [TemplateHTMLRenderer]
     serializer_class = PurchaseHistorySerializer
 
-    def get(self, request, pk):
+    def dispatch(self, request, *args, **kwargs):
         if request.COOKIES.get('AUTH_COOKIE') is None and request.COOKIES.get('USERNAME') is None:
             return redirect(reverse('auth_login'))
+        return super().dispatch(request, *args, **kwargs)
+
+    def get(self, request, pk):
         data = req.get(os.environ.get('SS_API_URL') + 'barang/' + pk).json()
         data = data['data']
         return Response({
@@ -110,9 +116,12 @@ class PurchaseHistoryAPIView(ListAPIView):
     
     queryset = PurchaseHistory.objects.all()
 
-    def get(self, request):
+    def dispatch(self, request, *args, **kwargs):
         if request.COOKIES.get('AUTH_COOKIE') is None and request.COOKIES.get('USERNAME') is None:
             return redirect(reverse('auth_login'))
+        return super().dispatch(request, *args, **kwargs)
+    
+    def get(self, request):
         username = request.COOKIES.get('USERNAME')
         user = User.objects.get(username=username)
 
