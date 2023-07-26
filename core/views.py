@@ -32,7 +32,6 @@ class ProductAPIView(ListAPIView):
         search_query = request.GET.get('q')
         if search_query:
             data = req.get(os.environ.get('SS_API_URL') + 'barang?q=' + search_query).json()
-            return Response(data, status=status.HTTP_200_OK)
         else:
             data = req.get(os.environ.get('SS_API_URL') + 'barang').json()
         
