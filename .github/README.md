@@ -75,13 +75,26 @@
     pip install -r requirements.txt
     ```
 
-5. Run the server.
+5. Create `.env` file
+
+    ```bash
+    SECRET_KEY=<your_secret_key>
+    DEBUG=<True_or_False>
+    SS_API_URL=<your_single_service_api_url>
+    PGDATABASE=<your_database_name>
+    PGHOST=<your_database_host>
+    PGPASSWORD=<your_database_password>
+    PGPORT=<your_database_port>
+    PGUSER=<your_database_username>
+    ```
+    
+6. Run the server.
 
     ```bash
     python manage.py runserver
     ```
 
-6. Open the website url `http://127.0.0.1:8000/` on your browser.
+7. Open the website url `http://127.0.0.1:8000/` on your browser.
 
 ## Docker
 
