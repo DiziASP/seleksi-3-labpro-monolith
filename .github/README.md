@@ -12,12 +12,13 @@
       <img src="https://img.shields.io/github/last-commit/DiziASP/seleksi-3-labpro-monolith.svg?style=flat-square&logo=github&logoColor=white"
            alt="GitHub last commit">
 </p>
-
+<p align="center"><sub>Raden Dizi Assyafadi Putra - 18221155<sub/><p/>
 <p align="center">
   <a href="#about">About</a> •
   <a href="#installation">Installation</a> •
   <a href="#docker">Docker</a> •
   <a href="#tech-stack">Tech Stack</a> •
+  <a href="#api-endpoint">API Endpoint</a> •
   <a href="#my-design-patterns">My Design Patterns</a> •
   <a href="#bonus">Bonus</a> •
   <a href="#license">License</a>
@@ -127,11 +128,23 @@ You can also run the application using Docker. Make sure you have Docker install
 
 ## Tech Stack
 
- ![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python)
- ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
- ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
- ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+ ![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python): v4.3.7
+ 
+ ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white): v13.0.0
+ 
+ ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white): latest
+ 
+ ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white): v3.8
 
+## API Endpoint
+
+This is the endpoint for the Single Service API:
+
+- POST /register         : Perform Register Request
+- POST /login            : Perform Login Request
+- GET /history           : Get product history
+
+More detailed Endpoint is described on the [Swagger](https://seleksi-3-labpro-monolith-production.up.railway.app/api/schema/swagger-ui/))
 ## My Design Patterns
 
 * **[Model-Template-View (MTV)](https://towardsdatascience.com/working-structure-of-django-mtv-architecture-a741c8c64082?gi=50fedc3ee24b)**
